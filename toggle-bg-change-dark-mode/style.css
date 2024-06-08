@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+.container {
+    font-family: monospace;
+    display: flex;
+    align-items: center; /* Uncomment this line */
+    justify-content: center;
+    gap: 10px;
+}

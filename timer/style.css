@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+    color: white;
+}
+.timer{
+    height: 96px;
+    width: 240px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ShowTime{
+    position: relative;
+    top:320px;
+    left: 572px;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 10px;
+}

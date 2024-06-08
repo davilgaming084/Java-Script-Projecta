@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    
+}
+
+body {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+    font-family: Arial, sans-serif; /* Use a default font family */
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh; /* Ensure at least viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%; /* Adjust width to a percentage for responsiveness */
+    max-width: 30rem; /* Limit maximum width */
+    background-color: rgb(36, 36, 36);
+    padding: 1rem; /* Use rem for padding for better responsiveness */
+    border-radius: 1rem; /* Use rem for border-radius for better responsiveness */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+button {
+    width: 100%; /* Occupy full width */
+    max-width: 450px; /* Limit maximum width */
+    height: 3rem; /* Use rem for height for better responsiveness */
+    border-radius: 0.5rem; /* Use rem for border-radius for better responsiveness */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Adjust maximum width for smaller screens */
+    }
+
+    button {
+        max-width: 100%; /* Occupy full width on smaller screens */
+    }
+}

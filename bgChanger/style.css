@@ -1,0 +1,58 @@
+body {
+    background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjkwNC1udW5ueS0wMDQuanBn.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+header {
+    width: auto;
+    height: 50px;
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+    padding-top: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    font-size: 30px;
+
+}
+
+.Container {
+    height: 400px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+    padding-left: 1100px;
+    padding-right: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.InnerDiv {
+    background-color: black;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 3px;
+
+
+}
+
+#divcolor {
+    background-color: black;
+    height: 300px;
+    width: 500px;
+    position: absolute;
+    top: 210px;
+    left: 20px;
+}
+.Indicate{
+    color: white;
+}
