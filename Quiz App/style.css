@@ -1,0 +1,22 @@
+*{
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+}
+body{
+    background-color: #242424;
+    color: white;
+    transition: 0.5s;
+}
+.container{
+    background-color: white;
+    color: black;
+    display: flex;
+    gap: 10px;
+    display:  block;
+    padding: 10px;
+}
+.row{
+    width: 100%;
+    margin: 2rem;
+}
