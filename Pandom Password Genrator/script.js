@@ -6,53 +6,46 @@ let SymbolSet = '!@#$%^&*()_~?|/'
 let getrandomData = (dataSet) => {
     return dataSet[Math.floor(Math.random() * dataSet.length)]
 }
-console.log(getrandomData(UppperCaseSet));
-console.log(getrandomData(LowerCaseSet));
-console.log(getrandomData(NumberSet));
-console.log(getrandomData(SymbolSet));
+// Graeb HTml Element 
+let UserLength = document.querySelector('#length')
+let upppercaesInput = document.querySelector('.uppercase')
+let lowercaseInput = document.querySelector('#lowercase')
+let numberInput = document.querySelector('#number')
+let symbolInput = document.querySelector('#Symbol')
+let GenrateBtn = document.querySelector("#generate").addEventListener('click', () => {
+    let finalpass = '';
+    let ConvertUserLengthStringIntoNumber = Number(UserLength.value)
 
+    if (upppercaesInput.checked) {
 
+        finalpass += getrandomData(UppperCaseSet)
+    }
+    if (lowercaseInput.checked) {
 
-// selection html input
-let passwordbox = document.querySelector('.text-show')
-let lengthinput = document.querySelector('#length')
-let uppercaseinput = document.querySelector('#uppercase')
-let lowercaseinput = document.querySelector('#lowercase')
-let numberinput = document.querySelector('#number')
-let symbolinput = document.querySelector('#symbol')
-let genrateBtn = document.querySelector('#generate').addEventListener('click', () => {
-    GenratePassword()
+        finalpass += getrandomData(LowerCaseSet)
+    }
+    if (numberInput.checked) {
+
+        finalpass += getrandomData(NumberSet)
+    }
+    if (symbolInput.checked) {
+
+        finalpass += getrandomData(SymbolSet)
+    }
+    if (finalpass.length < ConvertUserLengthStringIntoNumber) {
+        let minus = finalpass.length - ConvertUserLengthStringIntoNumber;
+        let _intoPositive = Math.abs(minus)
+        console.log(_intoPositive);
+        for (let index = 0; index < _intoPositive; index++) {
+            let upperREadd = getrandomData(UppperCaseSet)
+            let lowerREadd = getrandomData(LowerCaseSet)
+            let numberREadd = getrandomData(NumberSet)
+            let symbolREadd = getrandomData(SymbolSet)
+            let fourWhicUseFor = `${upperREadd}${lowerREadd}${numberREadd}${symbolREadd}`
+            finalpass += getrandomData(fourWhicUseFor)
+        }
+
+    }
+    console.log(finalpass);
+    console.log(ConvertUserLengthStringIntoNumber);
 })
-
-
-
-
-// CReate random Pass 
-let GenratePassword = (password = '') => {
-    if (uppercaseinput.checked) {
-        password += getrandomData(UppperCaseSet)
-    }
-    if (lowercaseinput.checked) {
-        password += getrandomData(LowerCaseSet)
-    }
-    if (numberinput.checked) {
-        password += getrandomData(NumberSet)
-    }
-    if (symbolinput.checked) {
-        password += getrandomData(SymbolSet)
-    }
-    if (password.length < lengthinput.value) {
-        return GenratePassword(password)
-    }
-     passwordbox.textContent = truncateString(password, lengthinput.value)
-
-}
-
-function truncateString(str, num) {
-    if (str.length > num) {
-        let substr = str.substring(0, num)
-        return substr
-    } else {
-        return str
-    }
-}
